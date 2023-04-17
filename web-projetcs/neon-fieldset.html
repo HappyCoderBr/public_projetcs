@@ -8,6 +8,21 @@
     <title>NEON_FIELDSET</title>
     <link rel="stylesheet" href="styles.css">
 
+    <script>
+        function colorSwapR() {
+            let r = document.getElementById('fldst');
+            r.style.border = "2px solid red";
+        }
+        function colorSwapG() {
+            let g = document.getElementById('fldst');
+            g.style.border = "2px solid green";
+        }
+        function colorSwapB() {
+            let b = document.getElementById('fldst');
+            b.style.border = "2px solid blue";
+        }
+
+    </script>
     <style>
         body {
             background-color: rgb(0, 0, 0);
@@ -31,6 +46,7 @@
             text-shadow: 0px 0px 25px rgba(255, 0, 0, 1),
                 0px 0px 25px rgba(255, 0, 0, 1);
             letter-spacing: 4px;
+
         }
 
         #radio_option_2:checked+label {
@@ -95,6 +111,7 @@
             background-color: transparent;
             max-width: 50%;
             max-height: 50%;
+            transition: all 1s;
         }
 
         /*invisibilidade total */
@@ -125,22 +142,21 @@
 </head>
 
 <body>
-    <fieldset>
+    <fieldset id="fldst">
         <legend>NEON STUFF</legend>
         <div id="master_div">
             <div id="div_1" class="div_sub">
-                <input type="radio" name="option" class="radio_options" id="radio_option_1">
+                <input onclick="colorSwapR()" type="radio" name="option" class="radio_options" id="radio_option_1">
                 <label for="radio_option_1" id="label_1" class="labels">RED</label>
             </div>
             <div id="div_2" class="div_sub">
-                <input type="radio" name="option" class="radio_options" id="radio_option_2">
+                <input onclick="colorSwapG()" type="radio" name="option" class="radio_options" id="radio_option_2">
                 <label for="radio_option_2" id="label_2" class="labels">GREEN</label>
             </div>
             <div id="div_3" class="div_sub">
-                <input type="radio" name="option" class="radio_options" id="radio_option_3">
+                <input onclick="colorSwapB()" type="radio" name="option" class="radio_options" id="radio_option_3">
                 <label for="radio_option_3" id="label_3" class="labels">BLUE</label>
             </div>
-
         </div>
     </fieldset>
 </body>
