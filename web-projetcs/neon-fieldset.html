@@ -11,17 +11,17 @@
     <script>
         function colorSwapR() {
             let rf = document.getElementById('fldst');
-            rf.style.border = "2px solid red";
+            rf.style.border = "2px solid rgba(255,0,0,1)";
 
             let rl = document.getElementById('lgnd');
-            rl.style.color = "red";
-            rl.style.textShadow = "0px 0px 30px red, 0px 0px 30px red";
+            rl.style.color = "rgba(255,0,0,1)";
+            rl.style.textShadow = "0px 0px 30px rgba(255,0,0,1), 0px 0px 30px rgba(255,0,0,1)";
 
 
         }
         function colorSwapG() {
             let gf = document.getElementById('fldst');
-            gf.style.border = "2px solid green";
+            gf.style.border = "2px solid rgba(0,255,0,1)";
 
             let gl = document.getElementById('lgnd');
             gl.style.color = "rgba(0,255,0,0.4)";
@@ -31,11 +31,11 @@
         }
         function colorSwapB() {
             let bf = document.getElementById('fldst');
-            bf.style.border = "2px solid blue";
+            bf.style.border = "2px solid rgba(0,0,255,1)";
 
             let bl = document.getElementById('lgnd');
-            bl.style.color = "blue";
-            bl.style.textShadow = "0px 0px 30px blue, 0px 0px 30px blue, 0px 0px 30px blue";
+            bl.style.color = "rgba(0,0,255,1)";
+            bl.style.textShadow = "0px 0px 30px rgba(0,0,255,1), 0px 0px 30px rgba(0,0,255,1)";
 
         }
 
@@ -57,6 +57,7 @@
             text-align: center;
             padding-left: 10px;
             padding-right: 10px;
+            transition: all 1s;
         }
 
         #radio_option_1:checked+label {
