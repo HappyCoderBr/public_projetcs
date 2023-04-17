@@ -10,16 +10,33 @@
 
     <script>
         function colorSwapR() {
-            let r = document.getElementById('fldst');
-            r.style.border = "2px solid red";
+            let rf = document.getElementById('fldst');
+            rf.style.border = "2px solid red";
+
+            let rl = document.getElementById('lgnd');
+            rl.style.color = "red";
+            rl.style.textShadow = "0px 0px 30px red, 0px 0px 30px red";
+
+
         }
         function colorSwapG() {
-            let g = document.getElementById('fldst');
-            g.style.border = "2px solid green";
+            let gf = document.getElementById('fldst');
+            gf.style.border = "2px solid green";
+
+            let gl = document.getElementById('lgnd');
+            gl.style.color = "rgba(0,255,0,0.4)";
+            gl.style.textShadow = "0px 0px 30px rgba(0,255,0,1), 0px 0px 30px rgba(0,255,0,1)";
+
+
         }
         function colorSwapB() {
-            let b = document.getElementById('fldst');
-            b.style.border = "2px solid blue";
+            let bf = document.getElementById('fldst');
+            bf.style.border = "2px solid blue";
+
+            let bl = document.getElementById('lgnd');
+            bl.style.color = "blue";
+            bl.style.textShadow = "0px 0px 30px blue, 0px 0px 30px blue, 0px 0px 30px blue";
+
         }
 
     </script>
@@ -30,7 +47,7 @@
             letter-spacing: 1px;
         }
 
-        legend {
+        #lgnd {
             -webkit-text-stroke: 1px whitesmoke;
             font-size: 300%;
             color: blueviolet;
@@ -143,7 +160,7 @@
 
 <body>
     <fieldset id="fldst">
-        <legend>NEON STUFF</legend>
+        <legend id="lgnd">NEON STUFF</legend>
         <div id="master_div">
             <div id="div_1" class="div_sub">
                 <input onclick="colorSwapR()" type="radio" name="option" class="radio_options" id="radio_option_1">
